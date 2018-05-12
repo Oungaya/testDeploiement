@@ -25,7 +25,7 @@ SECRET_KEY = 'q@$ad&9+0rzxkh=7)&oxm6eyz4f_)8-7m@3oe68wq7^bdu^x4+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['oungaya.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['oungaya.pythonanywhere.com', 'localhost', 'testdeploiementoptionnelles']
 
 
 # Application definition
@@ -48,6 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'testDeploiementHeroku.urls'
@@ -120,3 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+        
